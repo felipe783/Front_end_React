@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+  gap: 10px;
+}
+
+.btnCadas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.btnCadas button {
+  padding: 12px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.Felipe h1 {
+  padding: 12px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #FFFF;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  background-color: #2e2d4e;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.formulario input {
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid  #48456c;
+  height: 40px;
+  max-width: 50%;
+  width: 400px;
+  background-color: #363653;
+  color: #ffff;
+  font-size: 16px;
+  padding-left: 10px;
+  outline: none;
+}

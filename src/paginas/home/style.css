@@ -1,0 +1,76 @@
+/*! Botão*/
+.btn{
+    position: fixed;
+    top:0px;
+    right:10px;
+    display: flex;
+    gap:10px;
+}
+
+.btn button{
+    border: none;
+    border-radius:30px;
+    background-color: #FFFF;
+    padding: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3;
+}
+
+.btn button:hover{ /*Quando ele passar pro cima do botão*/
+    color: #ffffff;
+}
+
+/*! A lista por item*/
+.lista_link{ /*Cada "item"*/
+    display:flex;
+    gap: 20px;
+    list-style: none;
+    padding:0;
+    cursor: pointer;
+}
+
+.lista_item:hover{
+    font-weight: 700; /*bold */
+    color: #ffeeee;
+    text-shadow: 0 8px 16px rgba(0, 0, 0, 0.7)
+}
+
+/*! A lista inteira*/
+.container_lista{ 
+    width: fit-content;
+    position: absolute;
+    top: 0px;
+    margin-top: 530px;
+    display:flex;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+/*! Titulo e descrição*/
+.container_titulo{
+    width: fit-content;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #FFFF;
+    position: absolute;
+    top:0px;
+    margin-top: 70px;
+    left: 70px;
+    text-shadow: 0 10px 16px rgba(0, 0, 0, 0.7)
+}
+
+.container_titulo h1{
+    font-size: 50px;
+}
+
+.container_titulo h2{
+    margin-top: 5px;
+    font-size: 25px;
+}
