@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import * as tudo from "./animaconfig";
-import { useNavigate } from "react-router-dom";
 
 export function Animated({ children, className }) {
   
@@ -44,7 +43,6 @@ export function Lista_ul({ children, className }) {
 
 export function Lista_li({className}) {
   /*Todos os itens são unicos */ 
-  let navigate = useNavigate();
   return (
     <>
       {tudo.variaveis_lista.features.map((item) => ( 
@@ -52,10 +50,10 @@ export function Lista_li({className}) {
         Cada item é um objeto do array, e cada objeto tem "texto" "rota"
         */ 
         <motion.li 
-          className={className}
-          key={item} 
+          className={className} /*Nome da classe*/ 
+          key={item} /*O item*/
           variants={tudo.variaveis_lista.item} 
-          onClick={() => navigate(item.rota)} 
+          onClick={() => document.getElementById(item.rota).scrollIntoView({behavior:"smooth"})} /*Navegar quando clica*/ 
           whileHover= {{scale:1.05, y:-2 }}
           whileTap = {{scale:0.9, y:1}}
           transition= {{type:"spring", stiffness:200}}
