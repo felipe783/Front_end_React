@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router"
-import Home from './paginas/home/index.tsx'
-import Login from './paginas/login/index.tsx'
+import Home from './paginas/home'
+import Login from './paginas/login'
 import './index.css'
 
 const rootElement = document.getElementById('root')
@@ -12,7 +12,7 @@ if (rootElement) {
     <StrictMode>
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>

@@ -45,44 +45,12 @@
     color: #ffffff;
 }
 
-/*! A lista por item*/
-.lista_link{ /*Cada "item"*/
-    display:flex;
-    gap: 20px;
-    list-style: none;
-    padding:0;
-    cursor: pointer;
-}
-
-.lista_item:hover{
-    font-weight: 700; /*bold */
-    color: #ffeeee;
-    text-shadow: 0 8px 16px rgba(0, 0, 0, 0.7)
-}
-
-/*! A lista inteira*/
-.container_lista { 
-    position: absolute;
-    top: 530px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    padding: 15px;
-    font-size: 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 30px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
-}
-
 /*! Titulo e descrição*/
 .container_titulo {
     max-width: 650px;
     position: absolute;
     text-align: center;
-    top: 70px;
-    left: 70px;
-    padding: 20px;
+    padding: 25px;
     color: var(--color-text);
     text-shadow: 0 10px 16px var(--color-shadow);
 }
@@ -92,19 +60,45 @@
 }
 
 .container_titulo h2{
-    font-size: var(--font_subtitulo);
+    margin-top: 20px;
+    font-size: 30px;
     padding: 10px;
 }
 
 /*! "Abas" descrição */
 .container_descricao{
-    width: 50%;
-    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    flex-wrap: wrap;
     position: relative;
     margin: 800px 0 0 0;
     text-align: center;
     padding: 10px;
     color: var(--color-text);
     text-shadow: 0 10px 16px var(--color-shadow);
-    border: 10px solid;
 }
+
+.card_item{
+  max-width: 600px;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.card_item:hover .card_titulo{
+    color: #FFFF;
+    transition: all 0.3s ease;
+}
+
+
+.card_item:hover .card_titulo {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/*linear-gradient(135deg, #667eea 0%, #764ba2 100%);

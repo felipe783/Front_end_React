@@ -8,37 +8,26 @@ function Home() {
   return (
     <div className="container">
       <div className="btn">
-        <button
-          onClick={() =>
-            window.open(
-              "https://github.com/felipe783?tab=repositories",
-              "_blank",
-            )
-          }
-        >
+        <button onClick={() =>window.open("https://github.com/felipe783?tab=repositories","_blank",)} >
           Github
         </button>
         <button onClick={() => navigate("/login")}>Login</button>
-      </div>
+    </div>
 
-      <div className="container_titulo">
-        <h1 className="card">WorkSpace</h1>
-        <h2>
+    <div className="container_titulo">
+      <h1 className="card">WorkSpace</h1>
+      <h2>
           Workspace desenvolvido como projeto de portfólio, com foco em
           organização e produtividade.A proposta é apresentar uma solução
           simples e funcional para gerenciamento de tarefas e ideias,
           demonstrando habilidades técnicas e boas práticas de desenvolvimento.
-        </h2>
-      </div>
+      </h2>
+    </div>
 
-      <div className="container_lista">
-        <animacao.Lista_ul className="lista_link">
-          <animacao.Lista_li className="lista_item" />
-        </animacao.Lista_ul>
-      </div>
+    <div className="container_descricao">
 
-      <div className="container_descricao">
-        <h1 className="card  card_titulo titulo1" id="projeto">
+      <animacao.Card className= "card_item">
+        <h1 className="card  card_titulo" id="projeto">
           Sobre o Projeto
         </h1>
         <h2 className="card_descricao descricao1" >
@@ -48,8 +37,10 @@ function Home() {
           para garantir clareza, manutenibilidade e facilitar futuras melhorias
           e expansões.
         </h2>
-
-        <h1 className="card card_titulo titulo2" id="funcionalidade">
+      </animacao.Card>
+      
+      <animacao.Card className= "card_item"> 
+        <h1 className="card card_titulo" id="funcionalidade" >
           Funcionalidades
         </h1>
         <h2 className="card_descricao descricao2">
@@ -59,8 +50,10 @@ function Home() {
           Navegação simples e organizada para fácil acesso às principais
           funcionalidades.
         </h2>
+      </animacao.Card>
 
-        <h1 className="card card_titulo titulo3" id="stack">
+      <animacao.Card className= "card_item">
+        <h1 className="card card_titulo" id="stack">
           Stack
         </h1>
         <h2 className="card_descricao descricao3">
@@ -68,8 +61,10 @@ function Home() {
           regras de negócio, autenticação e integrações. Comunicação via APIs,
           garantindo desempenho, escalabilidade e manutenção fácil.
         </h2>
-      </div>
+      </animacao.Card>
+
     </div>
+  </div>
   );
 }
 
