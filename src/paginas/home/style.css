@@ -87,18 +87,18 @@
   text-align: center;
 }
 
+
 .card_item:hover .card_titulo{
     color: #FFFF;
     transition: all 0.3s ease;
 }
 
-
-.card_item:hover .card_titulo {
+.card_item:hover .card_titulo { /*O gradiente so vai aparecer no hover*/
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /*Aqui ele vai recorta o background e colocar no texto*/
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /*Deixa o texto transparente*/ 
   background-clip: text;
   color: transparent;
 }
-
-/*linear-gradient(135deg, #667eea 0%, #764ba2 100%);
