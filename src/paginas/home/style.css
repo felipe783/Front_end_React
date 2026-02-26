@@ -1,10 +1,27 @@
+/*! Coisas GLOBAIS*/
 :root { /*Aqui é as váriaveis globais */
     --color-text: #FFFF;
     --color-shadow: rgba(0, 0, 0, 0.7);
-    --spacing-sm: 5px;
-    --font-size-title: 50px;
-    --font-size-subtitle: 25px;
+    --font_titulo: 50px;
+    --font_subtitulo: 25px;
 }
+
+.card{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.card_titulo{
+    font-size: var(--font_titulo);
+    margin-bottom: 40px;
+}
+.card_descricao{
+    margin-bottom: 80px;
+    font-size: var(--font_subtitulo)
+}
+
 /*! Botão*/
 .btn{
     position: fixed;
@@ -44,24 +61,25 @@
 }
 
 /*! A lista inteira*/
-.container_lista{ 
-    width: fit-content;
+.container_lista { 
     position: absolute;
-    top: 0px;
-    margin-top: 530px;
-    display:flex;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 30px;
-    padding: 10px;
-    font-size: 20px;
+    top: 530px; 
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: fit-content;
+    padding: 15px;
+    font-size: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 30px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
 /*! Titulo e descrição*/
 .container_titulo {
+    max-width: 650px;
     position: absolute;
+    text-align: center;
     top: 70px;
     left: 70px;
     padding: 20px;
@@ -70,81 +88,23 @@
 }
 
 .container_titulo h1{
-    font-size: var(--font-size-title);
-    margin: 0;
+    font-size: var(--font_titulo);
 }
 
 .container_titulo h2{
-    font-size: var(--font-size-subtitle);
+    font-size: var(--font_subtitulo);
     padding: 10px;
-    max-width: 650px;
 }
 
-/*! Descrição */
-.titulo_projeto,.titulo_stack {
-
-    margin: 700px 0 30px 0;
-    font-size: 50px;
-    font-weight: bold;
-    color: #fff;
-    text-align: left;
-    padding-left: 20px;
-}
-
-.projeto_descricao {
-    margin: 0;
-    font-size: 25px;
-    font-weight: normal;
-    color: #fff;
-    text-align: left;
-    line-height: 1.6;
-    padding-left: 20px;
-}
-
-/*! Funcionalidades*/
-.titulo_funcionalidades {
+/*! "Abas" descrição */
+.container_descricao{
+    width: 50%;
+    max-width: 1000px;
     position: relative;
-    left:0;
-    margin: 200px 0 0 0;
-    font-size: 50px;
-    font-weight: bold;
-    color: #fff;
-}
-
-.projeto_funcionalidades {
-    margin: 0;
-    font-size: 25px;
-    font-weight: normal;
-    color: #fff;
-    text-align: left;
-    line-height: 1.6;
-    padding-left: 20px;
-}
-
-
- /*! Stack*/
-.titulo_stack {
-    margin: 200px 0 0 0;
-    font-size: 50px;
-    font-weight: bold;
-    color: #fff;
-}
-
-.projeto_stack {
-    margin: 0;
-    font-size: 25px;
-    font-weight: normal;
-    color: #fff;
-    text-align: left;
-    line-height: 1.6;
-    padding-left: 20px;
-}
-
-.card{
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* suporte Safari */
-    border-radius: 20px;
-    padding: 20px;
-    border: 1px solid rgba(255,255,255,0.2);
+    margin: 800px 0 0 0;
+    text-align: center;
+    padding: 10px;
+    color: var(--color-text);
+    text-shadow: 0 10px 16px var(--color-shadow);
+    border: 10px solid;
 }

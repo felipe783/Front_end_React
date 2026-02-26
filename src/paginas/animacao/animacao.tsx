@@ -1,8 +1,10 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import * as tudo from "./animaconfig";
 
-export function Animated({ children, className }) {
-  
+export function Animated({ children, className }:{
+  children: React.ReactNode
+  className?: string /* O "?" pro type ele considera como uma prop opcional sem o "?" seria obrigado a colocar ela */
+}) {
   return (
     <motion.div
       className={className}
@@ -15,20 +17,26 @@ export function Animated({ children, className }) {
   );
 }
 
-export function Botao({ children, className }) {
+export function Botao({ children, className }: {
+  children: React.ReactNode
+  className?: string
+}) {
   return (
-    <motion.div
+    <motion.button
       className={className}
-      whileHover={{ scale: 1.05, y: -2 }} /*Quando passa por cima ele aumenta*/ 
-      whileTap={{ scale: 0.9, y: 1 }} /*Quando clica ele diminui*/ 
+      whileHover={{ scale: 1.05, y: -2 }}
+      whileTap={{ scale: 0.9, y: 1 }}
       transition={{ type: "spring", stiffness: 100 }}
     >
       {children}
-    </motion.div>
+    </motion.button>
   );
 }
 
-export function Lista_ul({ children, className }) {
+export function Lista_ul({ children, className }:{
+  children: React.ReactNode 
+  className?:string
+}) {
   return (
     <motion.ul
       className={className}
@@ -41,7 +49,9 @@ export function Lista_ul({ children, className }) {
   );
 }
 
-export function Lista_li({className}) {
+export function Lista_li({className}:{
+  className?:string
+}) {
   /*Todos os itens são unicos */ 
   return (
     <>
@@ -51,9 +61,9 @@ export function Lista_li({className}) {
         */ 
         <motion.li 
           className={className} /*Nome da classe*/ 
-          key={item} /*O item*/
+          key={item.rota} /*O item*/
           variants={tudo.variaveis_lista.item} 
-          onClick={() => document.getElementById(item.rota).scrollIntoView({behavior:"smooth"})} /*Navegar quando clica*/ 
+          onClick={() => document.getElementById(item.rota)?.scrollIntoView ({behavior:"smooth"})} /*Navegar quando clica, sem o "?" ele pode dar null e o TS reclamar então é opcional*/ 
           whileHover= {{scale:1.05, y:-2 }}
           whileTap = {{scale:0.9, y:1}}
           transition= {{type:"spring", stiffness:200}}

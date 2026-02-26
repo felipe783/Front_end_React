@@ -1,5 +1,6 @@
+import type { Variants } from "framer-motion";
 
-export const botaoAnimado = {
+export const botaoAnimado: Variants = {
   hidden: { opacity: 0, y: 780 },
   visible: {
     opacity: 1,
